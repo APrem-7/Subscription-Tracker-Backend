@@ -1,0 +1,18 @@
+{
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "editor.inlineSuggest.edits.renderSideBySide": "never",
+    "editor.quickSuggestions": {
+        "other": "off"
+    }
+}
+
+
+
+{
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "editor.inlineSuggest.edits.renderSideBySide": "never",
+    "editor.quickSuggestions": {
+        "other": "off"
+    }
+}
