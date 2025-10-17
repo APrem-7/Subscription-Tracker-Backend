@@ -2,7 +2,7 @@ import express from "express";
 import { PORT } from "./env.js";
 
 import userRouter from "./ROUTES/user.routes.js";
-import subscriptionRouter from "./ROUTES/subscritions.routes.js";
+import subscriptionRouter from "./ROUTES/subscriptions.routes.js";
 import authRouter from "./ROUTES/auth.routes.js";
 import connectToDatabase from "./database/mongodb.js"
 
