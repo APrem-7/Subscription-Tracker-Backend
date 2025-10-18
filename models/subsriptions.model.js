@@ -87,7 +87,7 @@ subscriptionSchema.pre('save',function(next){
  
   }//if ends here
 
-  
+
   //so basically what is going on here is that depending on the frequency we have slected
   //the autorenewal will take it like months dialy weekly etc etc etc
 
@@ -100,3 +100,6 @@ subscriptionSchema.pre('save',function(next){
 
     next();
 })
+
+//this whole pre function can be thought of as a middleware.....cause the pre is running before and then the next is called 
+//somthing like that
