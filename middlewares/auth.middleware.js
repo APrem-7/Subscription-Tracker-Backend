@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-
+import User from '../models/user.model.js'
 import {JWT_SECRET} from '../env.js'
 
 const authorize = async (req,res,next)=>{
@@ -7,7 +7,7 @@ const authorize = async (req,res,next)=>{
         let token;
 
         if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
-            token = req.headers.authorization.split('')[1];
+            token = req.headers.authorization.split(' ')[1]; // use space, not empty string
         }
 
         if(!token){
