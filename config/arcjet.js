@@ -30,7 +30,7 @@ const aj = arcjet({
     // Create a token bucket rate limit. Other algorithms are supported.
     /* for example if you set the interval to 60s and the refill rate to 10 
         It will refill 10 tokens every 60 seconds*/
-        
+
     tokenBucket({
       mode: "LIVE",
       // Tracked by IP address by default, but this can be customized
@@ -45,3 +45,4 @@ const aj = arcjet({
   ],
 });
 
+export default aj;
