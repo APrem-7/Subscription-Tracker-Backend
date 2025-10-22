@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import {NODE_ENV,DB_URI} from '../env.js'
+import {NODE_ENV,DB_URI} from '../config/env.js'
  
 if(!DB_URI){
     throw new Error('pkease define the MONGO_DB env cvariablle iosnide teh .env.development/local');

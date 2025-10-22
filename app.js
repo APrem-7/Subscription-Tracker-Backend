@@ -1,5 +1,5 @@
 import express from "express";
-import { PORT } from "./env.js";
+import { PORT } from "./config/env.js";
 import cookieParser from 'cookie-parser'
 
 import userRouter from "./ROUTES/user.routes.js";
