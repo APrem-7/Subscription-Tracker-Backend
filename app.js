@@ -9,8 +9,6 @@ import connectToDatabase from "./database/mongodb.js"
 import errorMiddleware from "./middlewares/error.middleware.js"
 
 
-import arcjet, { shield, detectBot, tokenBucket } from "@arcjet/node";
-import { isSpoofedBot } from "@arcjet/inspect";
 
 const app = express();
 
