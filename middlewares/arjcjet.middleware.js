@@ -1,6 +1,6 @@
 import aj from '../config/arcjet.js'
 
-const arjectMiddleware =   async (req,res,next)=>{
+const arcjetMiddleware =   async (req,res,next)=>{
     try{
         const decision = await aj.protect(req,{requested:1}); //this requested :1 means that each request will deduct 1 token 
 
@@ -11,7 +11,7 @@ const arjectMiddleware =   async (req,res,next)=>{
         
 
         if(decision.reason.isBot()){
-                return res.status(403).json({error:'Bot Exceeded'})
+                return res.status(403).json({error:'Bot Detected'})
             }
         
     }
@@ -23,3 +23,5 @@ const arjectMiddleware =   async (req,res,next)=>{
         next(error);
     }
 }
+
+export default arcjetMiddleware;
