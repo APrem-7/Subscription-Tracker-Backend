@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Ananda Prem R</h1>
+<h1 align="center">Subscription Tracker</h1>
 <h3 align="center">This is a backend built on Node and Express To Track And Manage Your Expenses</h3>
 
 <h3 align="left">Connect with me:</h3>
