@@ -18,3 +18,15 @@ export const createSubscription = async (req,res,next)=>{
 
 }
 
+export const getUserSubscriptions = async (req,res,next)=>{
+    
+    try{
+      //check is the user is the same as the one in the token  
+    
+    }catch(error){
+
+        next(error)
+    }
+
+
+}
