@@ -100,3 +100,10 @@ subscriptionSchema.pre('save',function(next){
 
     next();
 })
+
+
+const Subscription = mongoose.model('Subscription',subscriptionSchema);
+//this whole pre function can be thought of as a middleware.....cause the pre is running before and then the next is called 
+//somthing like that
+
+export default Subscription
