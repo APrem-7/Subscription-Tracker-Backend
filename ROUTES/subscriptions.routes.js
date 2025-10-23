@@ -4,7 +4,7 @@ import authorize from '../middlewares/auth.middleware.js'
 
 const subscriptionRouter = Router();
 
-subscriptionRouter.get('/',authorize,createSubscription);      
+subscriptionRouter.post('/',authorize,createSubscription);      
 
 export default subscriptionRouter;
 

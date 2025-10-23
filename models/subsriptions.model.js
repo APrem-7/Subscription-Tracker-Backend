@@ -25,8 +25,18 @@ const subscriptionSchema = new mongoose.Schema({
         enum:['daily','weekly','monthly','yearly'],
         required:true,
     },
-    payment:{
-           type:Number,
+    category:{
+      type:String,
+      enum:['sports','news','entertainment','lifestyle','technology','finance','politics','other'],
+
+    },
+    paymentMethod:{
+      type:String,
+      required:true,
+      trim:true,
+    },
+    startDate:{
+           type:Date,
            required:true,
            validate:{
             validator:(value)=> value <= new Date()
@@ -34,8 +44,8 @@ const subscriptionSchema = new mongoose.Schema({
           message:'Start date must be in the past',
         },
     renewalDate:{
-          type:Number,
-           required:true,
+           type:Date,
+      
            validate:{
             validator:function(value){ 
               return value > this.startDate;
@@ -100,10 +110,11 @@ subscriptionSchema.pre('save',function(next){
 
     next();
 })
+//this whole pre function can be thought of as a middleware.....cause the pre is running before and then the next is called 
+//somthing like that
+
 
 
 const Subscription = mongoose.model('Subscription',subscriptionSchema);
-//this whole pre function can be thought of as a middleware.....cause the pre is running before and then the next is called 
-//somthing like that
 
 export default Subscription
