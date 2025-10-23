@@ -46,7 +46,7 @@ const subscriptionSchema = new mongoose.Schema({
        
     },
     user:{
-      type:mongoose.Scheme.Types.ObjectId,
+      type:mongoose.Schema.Types.ObjectId,
       ref:'User',
       required:true,
       index:true,

@@ -1,4 +1,4 @@
-import Subscription from "../models/subsriptions.model"
+import Subscription from "../models/subsriptions.model.js"
 
 export const createSubscription = async (req,res,next)=>{
     
@@ -17,3 +17,5 @@ export const createSubscription = async (req,res,next)=>{
 
 
 }
+
+export
