@@ -16,7 +16,7 @@ subscriptionRouter.get('/upcoming-renewals', authorize, (req, res) => res.send({
 
 subscriptionRouter.put('/:id', authorize, (req, res) => res.send({ title: 'UPDATE subscription' }));
 
-subscriptionRouter.get('/:id', authorize, getUserSubscriptions);
+subscriptionRouter.get('/user/:id', authorize, getUserSubscriptions);
 
 
 subscriptionRouter.delete('/:id', authorize, (req, res) => res.send({ title: 'DELETE subscription' }));
