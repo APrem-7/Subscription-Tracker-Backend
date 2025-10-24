@@ -11,7 +11,6 @@ subscriptionRouter.get('/:id', (req, res) => res.send({ title: 'GET subscription
 
 subscriptionRouter.post('/', authorize, createSubscription);
 
-
 subscriptionRouter.put('/:id/cancel', authorize, (req, res) => res.send({ title: 'CANCEL subscription' }));
 
 subscriptionRouter.get('/upcoming-renewals', authorize, (req, res) => res.send({ title: 'GET upcoming renewals' }));
