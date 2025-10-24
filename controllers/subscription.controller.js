@@ -22,7 +22,7 @@ export const getUserSubscriptions = async (req,res,next)=>{
     
     try{
       //check is the user is the same as the one in the token  
-      if(req.user.id != req.params.id){
+      if(String(req.user._id) !== String(req.params.id)){
         const Error = new Error('This is not Your Account please try again!')
         error.status = 401
         throw new error
